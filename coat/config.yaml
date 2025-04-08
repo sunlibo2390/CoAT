@@ -11,8 +11,8 @@ DATA:
 
 MODEL:
   NAME: "command_line"
-  OPENAI_API_URL: "https://api.ai-gaochao.cn/v1/chat/completions"
-  OPENAI_API_KEY: "sk-8zJcG6Omb3x8s9ZU1211528aBd754f6c8dCa3c52727d3f77"
+  OPENAI_API_URL: ""
+  OPENAI_API_KEY: ""
   GEMINI_API_KEY: ""
   GEMINI_MODEL: gemini-pro-vision
   DASHSCOPE_API_KEY: ""
