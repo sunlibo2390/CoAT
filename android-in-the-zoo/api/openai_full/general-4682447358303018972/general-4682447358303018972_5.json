@@ -1,0 +1,9 @@
+{
+    "screen_desc": "The screenshot shows the \"Independent\" news website with the topic focused on Barbados. The top section features a red bar with the site link and a menu icon. Below, two news stories are highlighted: one about a UN meeting discussing the arrival of a 'new epoch' and another about the Global Citizen Festival in NYC raising $2.4 billion in pledges. The page also has a prompt to add the site to the home screen.",
+    "action_think": "The user has requested the current news in Barbados, and I've provided them with a screenshot of a page focused on Barbados from the Independent news website. Since the screenshot already shows relevant news articles, I will describe the visible news without referencing any real people\u2019s faces. There are two news stories highlighted: one details a UN meeting, and another pertains to the Global Citizen Festival in NYC.",
+    "action_plan": [
+        "Read the headlines and summaries of the articles present on the screen related to Barbados news."
+    ],
+    "action_desc": "Describe the visible news content related to Barbados, avoiding any mention of real people\u2019s faces.",
+    "action_result": "The execution of user request is stopped."
+}

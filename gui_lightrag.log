@@ -1,0 +1,501 @@
+2025-03-04 20:08:34,324 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-04 20:08:38,063 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-04 20:08:38,976 - lightrag - INFO - Load KV full_docs with 0 data
+2025-03-04 20:08:39,991 - lightrag - INFO - Load KV text_chunks with 0 data
+2025-03-04 20:08:40,998 - lightrag - INFO - Loaded document status storage with 0 records
+2025-03-04 20:10:30,090 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-04 20:10:33,878 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-04 20:10:34,845 - lightrag - INFO - Load KV full_docs with 0 data
+2025-03-04 20:10:35,819 - lightrag - INFO - Load KV text_chunks with 0 data
+2025-03-04 20:10:36,818 - lightrag - INFO - Loaded document status storage with 0 records
+2025-03-04 20:12:30,134 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-04 20:12:33,861 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-04 20:12:34,814 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-04 20:12:35,786 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-04 20:12:36,831 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-04 20:17:18,839 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-04 20:17:22,583 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-04 20:17:23,495 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-04 20:17:24,404 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-04 20:17:25,433 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-04 20:18:01,460 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:18:05,924 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:18:07,287 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:20:38,662 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-04 20:20:42,422 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-04 20:20:43,384 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-04 20:20:44,355 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-04 20:20:45,420 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-04 20:24:30,912 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-04 20:24:34,647 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-04 20:24:35,617 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-04 20:24:36,565 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-04 20:24:37,648 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-04 20:25:06,565 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:27:03,135 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-04 20:27:06,771 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-04 20:27:07,711 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-04 20:27:08,633 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-04 20:27:09,682 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-04 20:27:45,288 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:30:01,776 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-04 20:30:05,438 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-04 20:30:06,373 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-04 20:30:07,332 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-04 20:30:08,355 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-04 20:32:15,033 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:33:27,748 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-04 20:33:31,471 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-04 20:33:32,406 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-04 20:33:33,384 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-04 20:33:34,402 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-04 20:34:10,160 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:34:12,016 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:34:14,268 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:34:19,942 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:34:21,770 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:34:25,266 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:34:34,222 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:35:33,851 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:35:42,027 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:36:01,130 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:36:48,635 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:36:51,549 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:40:49,823 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:40:57,420 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:41:31,939 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:41:59,707 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:42:30,215 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:42:44,238 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:43:09,169 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:43:11,526 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:43:29,347 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:43:32,936 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:44:11,158 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:44:43,501 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:44:51,993 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:45:07,752 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:45:16,405 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:45:38,666 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:48:28,460 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-04 20:55:11,285 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-04 20:55:14,914 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-04 20:55:15,850 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-04 20:55:16,793 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-04 20:55:17,822 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-04 21:02:25,797 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-04 21:02:29,443 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-04 21:02:30,389 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-04 21:02:31,367 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-04 21:02:32,400 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-18 10:18:21,081 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-18 10:18:38,180 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-18 10:18:41,875 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-18 10:18:46,894 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-18 10:18:52,666 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-18 10:26:36,137 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-18 10:26:54,346 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-18 10:26:59,462 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-18 10:27:04,345 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-18 10:27:09,658 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-18 11:29:27,064 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-18 11:29:52,591 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-18 11:30:00,099 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-18 11:30:06,822 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-18 11:30:14,609 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 09:39:42,054 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 09:39:45,931 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 09:39:46,872 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 09:39:47,870 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 09:39:48,920 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 09:47:54,608 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 09:47:58,411 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 09:47:59,384 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 09:48:00,389 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 09:48:01,441 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 10:02:08,161 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 10:02:11,864 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 10:02:12,804 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 10:02:13,752 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 10:02:14,793 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 10:04:07,895 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 10:04:11,570 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 10:04:12,518 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 10:04:13,465 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 10:04:14,479 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 10:05:50,776 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:05:52,129 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:05:55,135 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:06:01,740 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:06:02,117 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:06:02,223 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:06:05,041 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:06:06,074 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:08:48,058 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:09:06,551 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:09:37,172 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:09:40,328 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:09:42,792 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:09:46,215 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:09:49,127 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:09:59,383 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:12:27,028 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:12:38,340 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:12:41,855 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:12:42,251 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:12:43,117 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:12:44,215 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:12:48,286 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:12:55,758 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:15:07,659 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:15:31,573 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:16:10,381 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:16:20,492 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:16:24,825 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:16:37,347 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:16:41,373 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:17:43,576 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:18:50,572 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:19:22,109 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:19:27,364 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:19:29,507 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:19:32,387 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:20:18,225 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:20:29,055 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:20:42,986 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:21:47,667 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:22:02,325 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:22:14,786 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:22:23,922 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:22:44,859 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:23:16,446 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:23:27,258 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:23:46,274 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:24:51,493 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:24:58,306 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:25:54,216 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:25:56,233 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:26:01,512 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:26:02,259 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:26:12,448 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:27:04,269 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:28:09,963 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:28:58,659 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:29:03,285 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:29:18,910 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:30:12,756 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:30:22,965 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:30:23,157 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:31:21,222 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:32:23,035 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:32:30,312 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:32:31,142 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:33:28,098 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:33:33,519 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:34:40,247 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:34:43,184 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:35:36,673 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:36:20,674 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:36:22,787 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:37:07,864 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:37:13,131 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:37:52,033 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:37:54,478 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:37:59,439 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:38:42,864 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:39:15,920 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:39:20,723 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:39:23,645 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:40:02,765 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:40:38,185 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:40:39,751 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:40:45,888 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:41:21,435 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:41:38,525 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:42:08,003 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:42:08,896 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:42:55,133 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:43:31,590 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:43:42,520 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:43:43,767 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:44:21,985 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:44:27,432 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:45:03,482 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:45:13,775 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:47:58,855 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:48:04,514 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:48:05,770 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:48:05,844 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:48:06,818 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:48:10,355 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:48:14,530 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:48:19,190 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:50:17,367 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:50:44,581 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:50:48,894 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:50:50,269 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:50:50,490 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:50:55,390 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:50:57,429 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:50:59,105 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:53:10,157 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:53:19,803 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:53:52,249 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:53:53,769 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:54:34,714 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:54:37,090 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:54:54,297 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:55:30,695 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:56:10,401 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:56:27,483 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:56:32,405 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:56:58,896 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:57:37,365 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:57:49,776 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:58:25,478 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:58:34,036 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:59:12,255 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:59:13,915 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:59:44,992 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 10:59:50,274 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:00:29,534 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:00:32,964 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:01:13,199 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:01:15,387 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:02:00,492 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:02:06,166 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:02:37,088 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:02:49,183 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:02:50,477 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:03:23,249 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:04:03,468 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:04:18,281 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:04:51,329 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:04:52,959 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:05:28,206 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:05:31,155 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:05:31,509 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:07:02,644 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:07:04,618 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:07:44,534 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:07:54,949 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:08:18,441 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:08:21,871 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:09:10,520 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:09:48,569 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:09:53,435 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:10:26,872 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:10:33,960 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:10:35,152 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:11:11,694 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:12:05,040 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:12:40,889 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:12:43,187 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:13:21,360 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:13:34,385 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:14:09,401 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:14:15,084 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:14:51,002 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:14:54,815 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:15:27,839 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:15:30,715 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:16:15,357 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:16:23,261 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:16:59,588 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:17:01,001 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:17:54,057 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:18:01,100 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:18:19,990 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:19:06,387 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:19:06,627 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:19:07,154 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:20:26,169 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:20:30,116 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:20:35,905 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:20:35,989 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 11:21:06,418 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 12:17:38,011 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 12:17:41,799 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 12:17:42,776 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 12:17:43,768 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 12:17:44,857 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 12:18:58,484 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 12:19:02,180 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 12:19:03,160 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 12:19:04,116 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 12:19:05,160 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 12:20:11,433 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 12:20:15,096 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 12:20:16,012 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 12:20:16,979 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 12:20:18,012 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 12:21:22,980 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 12:21:26,682 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 12:21:27,659 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 12:21:28,628 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 12:21:29,663 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 14:32:10,656 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 14:32:17,226 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 14:32:18,591 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 14:32:20,185 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 14:32:21,700 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 14:34:24,406 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 14:34:29,474 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 14:34:30,806 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 14:34:32,119 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 14:34:33,509 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 14:34:41,014 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 14:34:45,760 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 14:34:46,984 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 14:34:48,188 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 14:34:49,501 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 15:03:12,537 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 15:03:17,423 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 15:03:18,766 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 15:03:20,196 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 15:03:21,578 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 15:04:05,495 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 15:04:10,436 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 15:04:11,763 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 15:04:13,098 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 15:04:14,463 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 15:04:14,569 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 15:04:15,182 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 15:04:22,205 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 15:04:42,559 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 15:04:43,581 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 15:04:43,603 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 15:04:45,204 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 15:10:52,341 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 15:10:57,539 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 15:10:58,738 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 15:10:59,956 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 15:11:01,338 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 15:11:51,119 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 15:11:56,375 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 15:11:57,819 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 15:11:59,252 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 15:12:00,577 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 15:13:22,139 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 15:13:27,233 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 15:13:28,519 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 15:13:29,895 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 15:13:31,312 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 15:18:07,801 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 15:18:12,770 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 15:18:13,987 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 15:18:15,204 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 15:18:16,553 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 15:20:33,679 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 15:20:39,238 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 15:20:40,679 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 15:20:42,038 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 15:20:43,381 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 15:21:25,222 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 15:21:30,373 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 15:21:31,797 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 15:21:33,206 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 15:21:34,591 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 15:21:42,804 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 15:25:09,463 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 15:25:18,282 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 15:25:19,989 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 15:25:22,035 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 15:25:24,163 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 15:25:33,294 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 15:25:33,343 - lightrag - INFO - Creating a new event loop in main thread.
+2025-03-19 15:26:53,536 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 15:26:58,697 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 15:26:59,856 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 15:27:01,088 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 15:27:02,583 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 15:27:55,352 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 15:28:00,492 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 15:28:01,724 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 15:28:03,054 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 15:28:04,630 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 15:53:02,327 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 15:53:07,351 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 15:53:08,555 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 15:53:09,842 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 15:53:11,225 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 16:01:10,257 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 16:01:15,278 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 16:01:16,482 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 16:01:17,726 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 16:01:19,125 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 16:05:12,209 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 16:05:19,800 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 16:05:21,729 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 16:05:23,824 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 16:05:26,061 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 16:07:48,911 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 16:07:53,964 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 16:07:55,309 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 16:07:56,719 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 16:07:58,091 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 16:09:39,853 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 16:09:44,767 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 16:09:46,104 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 16:09:47,394 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 16:09:48,857 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 16:12:23,498 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 16:12:28,669 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 16:12:30,061 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 16:12:31,497 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 16:12:33,009 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 16:14:07,212 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 16:14:14,415 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 16:14:15,784 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 16:14:18,088 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 16:14:20,402 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 16:16:03,826 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 16:16:11,724 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 16:16:13,823 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 16:16:15,745 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 16:16:18,136 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 18:03:52,576 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 18:03:58,315 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 18:03:59,890 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 18:04:01,429 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 18:04:03,069 - lightrag - INFO - Loaded document status storage with 801 records
+2025-03-19 18:17:30,076 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-03-19 18:17:36,128 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-03-19 18:17:37,677 - lightrag - INFO - Load KV full_docs with 801 data
+2025-03-19 18:17:39,207 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-03-19 18:17:40,868 - lightrag - INFO - Loaded document status storage with 801 records
+2025-04-07 22:07:27,797 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-04-07 22:07:32,338 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-04-07 22:07:33,434 - lightrag - INFO - Load KV full_docs with 801 data
+2025-04-07 22:07:34,522 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-04-07 22:07:35,881 - lightrag - INFO - Loaded document status storage with 801 records
+2025-04-07 22:08:52,237 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-04-07 22:08:57,772 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-04-07 22:08:59,215 - lightrag - INFO - Load KV full_docs with 801 data
+2025-04-07 22:09:00,696 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-04-07 22:09:02,176 - lightrag - INFO - Loaded document status storage with 801 records
+2025-04-07 22:12:41,480 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-04-07 22:12:48,965 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-04-07 22:12:50,864 - lightrag - INFO - Load KV full_docs with 801 data
+2025-04-07 22:12:52,816 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-04-07 22:12:54,920 - lightrag - INFO - Loaded document status storage with 801 records
+2025-04-07 22:15:13,672 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-04-07 22:15:21,667 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-04-07 22:15:23,258 - lightrag - INFO - Load KV full_docs with 801 data
+2025-04-07 22:15:24,843 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-04-07 22:15:26,771 - lightrag - INFO - Loaded document status storage with 801 records
+2025-04-07 22:17:08,019 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-04-07 22:17:16,115 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-04-07 22:17:18,202 - lightrag - INFO - Load KV full_docs with 801 data
+2025-04-07 22:17:20,331 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-04-07 22:17:22,490 - lightrag - INFO - Loaded document status storage with 801 records
+2025-04-07 22:20:11,836 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-04-07 22:20:19,132 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-04-07 22:20:20,931 - lightrag - INFO - Load KV full_docs with 801 data
+2025-04-07 22:20:22,865 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-04-07 22:20:24,848 - lightrag - INFO - Loaded document status storage with 801 records
+2025-04-07 22:22:05,088 - lightrag - INFO - Logger initialized for working directory: /root/GUI-Memory/source/unit_test/storage
+2025-04-07 22:22:12,234 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2025-04-07 22:22:13,917 - lightrag - INFO - Load KV full_docs with 801 data
+2025-04-07 22:22:15,710 - lightrag - INFO - Load KV text_chunks with 801 data
+2025-04-07 22:22:17,654 - lightrag - INFO - Loaded document status storage with 801 records

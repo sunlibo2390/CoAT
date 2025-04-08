@@ -1,0 +1,10 @@
+{
+    "screen_desc": "The screenshot shows the search results on Walmart's website for \"best rated 4k tvs\". Displayed is a list of TVs for sale, with at least one product listed - a TCL 43\" Class 4-Series 4K UHD HDR Roku Smart TV, marked down from $250.00 to $218.00. It includes the options to pick up, get delivery, and indicates 1-day shipping is available. Additionally, there are customer ratings and other purchase options such as 'Add to cart' visible.",
+    "action_think": "The user is looking for the best-rated 4K TV on Walmart's website. The current screen shows a list of 4K TVs with ratings and prices, but it doesn't clearly indicate which one is the highest rated. Based on the display, I need to identify the TV with the best rating from the visible results, and proceed to open that product's details to assist the user further.",
+    "action_plan": [
+        "Look at the ratings for each product on the current screen.",
+        "Select the TV with the highest rating to view more details."
+    ],
+    "action_desc": "Select the TCL 43\" Class 4-Series 4K UHD HDR Roku Smart TV to view more details.",
+    "action_result": "The execution of user request is stopped."
+}

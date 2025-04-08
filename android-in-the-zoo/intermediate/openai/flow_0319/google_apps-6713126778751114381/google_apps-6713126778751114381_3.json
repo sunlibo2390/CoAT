@@ -1,0 +1,22 @@
+{
+    "screen_desc": "The screenshot shows a mobile app drawer with various app icons arranged in rows. At the top, there is a search bar labeled \"Search your phone and more.\" The icons include commonly used apps such as Photos, Clock, YouTube, Gmail, Facebook, and Google Drive, among others. The \"All apps\" section is visible, suggesting access to the entire app list on the device. The bottom row displays essential apps like Phone, Play Store, and Settings.",
+    "action_think": "The app 'Fetch Rewards' is not visible in the current app drawer. Since the user wants to uninstall it, I need to search for it in the app drawer first. The search bar at the top of the screen is available for this purpose, so I will use it to search for 'Fetch Rewards.'",
+    "action_plan": [
+        "Tap on the search bar at the top of the screen.",
+        "Type 'Fetch Rewards' in the search bar.",
+        "Find 'Fetch Rewards' in the search results and long press on the app icon.",
+        "Select the uninstall option from the available actions."
+    ],
+    "action_desc": "Tap on the search bar at the top of the screen.",
+    "action_result": "By clicking on the Google Play Store app, you have navigated to the app store. This action is a necessary step because, to uninstall an app like \"Fetch Rewards,\" you need to either locate it in your installed apps section or search for it directly within the Play Store. This move brings you closer to completing your request to uninstall the app. \n\nThe next step would be to either search for \"Fetch Rewards\" in the Play Store or go to the \"My apps\" section, where you can find and uninstall the app.",
+    "action_predict": {
+        "COAT": {
+            "tag": {
+                "ACTION": "click_element",
+                "ARGS": {
+                    "idx": 0
+                }
+            }
+        }
+    }
+}

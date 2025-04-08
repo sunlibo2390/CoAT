@@ -1,0 +1,20 @@
+{
+    "screen_desc": "The screenshot shows a YouTube mobile interface. The user is viewing a video titled \"new justin bieber video,\" with an ad promoting a video downloader app displayed at the bottom. Below the ad, there is a music video from Justin Bieber titled \"Honest ft. Don Toliver\" playing. The video controls are visible, with options for Home, Shorts, Subscriptions, and Library at the bottom.",
+    "action_think": "The user is currently viewing the search results for 'new Justin Bieber video' on YouTube, with a relevant video playing at the moment. The next logical step is to click on the video to begin playback since the video is already visible in the interface.",
+    "action_plan": [
+        "Click on the video titled 'new justin bieber video' to start playing the video."
+    ],
+    "action_desc": "Click on the video titled 'new justin bieber video' to start playing the video.",
+    "action_result": "By clicking on the video thumbnail for \"Justin Bieber - Honest ft. Don Toliver,\" the video has started to play. This action directly fulfills the user request to play the new Justin Bieber video on YouTube. The video is now actively playing, making progress towards completing the request.",
+    "prev_action_result": "By scrolling up, I have moved to a higher part of the video list in the YouTube search results. The current screen now shows the \"Justin Bieber - Honest ft. Don Toliver\" video, which is the requested Justin Bieber video. This action has progressed toward completing the user request because the correct video has appeared in the results. The next step would be to select and play the video.",
+    "action_predict": {
+        "COAT": {
+            "tag": {
+                "ACTION": "click_element",
+                "ARGS": {
+                    "idx": 2
+                }
+            }
+        }
+    }
+}

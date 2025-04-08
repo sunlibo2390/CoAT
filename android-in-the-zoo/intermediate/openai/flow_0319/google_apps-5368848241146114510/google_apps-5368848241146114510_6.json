@@ -1,0 +1,22 @@
+{
+    "screen_desc": "This screenshot shows a Google search for \"Italian restaurant.\" The highlighted restaurant, TGI Fridays, appears with images of its food and key details like the rating (3.9 stars from 1,394 reviews), its location, and operational hours. Options like \"Dine-in,\" \"Curbside pickup,\" and \"No-contact\" services are listed. There is also a link to view the restaurant's menu and a map to locate nearby TGI Fridays.",
+    "action_think": "The user has already searched for 'Italian restaurants' and has navigated to the Maps view. The next step is to identify the restaurants that appear in the map view and select one for further details, if necessary.",
+    "action_plan": [
+        "Identify an Italian restaurant on the map.",
+        "Click on a restaurant to view more details.",
+        "Optionally, review the restaurant's location, hours, and menu."
+    ],
+    "action_desc": "Click on the restaurant marker on the map to view more details.",
+    "action_result": "The execution of user request is stopped.",
+    "prev_action_result": "By clicking on the suggested search query \"italian restaurant\" below the search bar, the search has now been populated with the query, which will help display results for Italian restaurants in the Maps app. This action directly supports the user request to search for Italian restaurants on Maps by automatically initiating the search. Therefore, progress has been made towards completing the user request.",
+    "action_predict": {
+        "COAT": {
+            "tag": {
+                "ACTION": "click_element",
+                "ARGS": {
+                    "idx": 10
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "user_request": "open app \"Mercado Libre\" (install if not already installed) and enter user name: \"tolerating@yahoo.com\" and password: \"Kepler\"",
+    "image_path": "/root/GUI-Memory/data/android_in_the_zoo/test_sample/install/INSTALL-12455787169497336622/INSTALL-12455787169497336622_0.png",
+    "ui_path": "/root/GUI-Memory/data/android_in_the_zoo/train_ui_image/install_INSTALL-13442027519694060446_0.png",
+    "screen_desc": "The screenshot shows a mobile home screen with a pink gradient background. The top of the screen displays the date \"Tuesday, Aug 23,\" along with the temperature (74°F). Below, there are three app icons: Messages (blue speech bubble), Chrome (colorful circle), and a Google search bar at the bottom with a microphone icon. The layout has a simple and clean design with no visible notifications.",
+    "history_actions": [],
+    "action_plan": [
+        "Open the Google Play Store by tapping on the 'Google' search icon at the bottom of the screen.",
+        "Search for 'Mercado Libre' in the Play Store.",
+        "Install the Mercado Libre app if it is not already installed."
+    ],
+    "action_with_memory": {
+        "Next Single Step Action": "Open the Google Play Store by tapping on the 'Google' search icon at the bottom of the screen."
+    }
+}

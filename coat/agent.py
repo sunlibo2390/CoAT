@@ -36,6 +36,29 @@ class BaseAgent(object):
         self.prompts = config['PROMPTS']
         self.vlm = get_model(config['MODEL'])
 
+        class EmbeddingConfig:
+            def __init__(self, model_name, embed_dim, max_token_size):
+                self.model_name = model_name
+                self.embed_dim = embed_dim
+                self.max_token_size = max_token_size
+
+        # 创建 EmbeddingConfig 对象
+        embedding_config = EmbeddingConfig(
+            model_name="MiniCPM-Embedding",
+            embed_dim=2304,
+            max_token_size=128
+        )
+        import sys
+        sys.path.append("/root/GUI-Memory")
+        from source.memory.stationary_mem import StationaryMemory
+        from source.lightrag import GUILightRAG, GUIQueryParam
+        
+        self.memory = StationaryMemory(
+            "hf", "MiniCPM-V-2_6", embedding_config, 
+            model_dir="openbmb", rag_dir='/root/GUI-Memory/source/unit_test/storage'
+        )
+        self.query_param = GUIQueryParam(mode="naive", top_n=1, top_k=1)
+
     def observe(self, user_request, screen_path, **kwargs):
         sys_rompt = self.prompts['SCREEN_DESC']['SYSTEM']
         usr_prompt = self.prompts['SCREEN_DESC']['USER']
@@ -70,6 +93,63 @@ class BaseAgent(object):
         for txt in usr_prompt[1:]: prompt.append(("user", {"text": txt}))
 
         res, state = self.vlm.get_response(screen_path, prompt)
+        return res, state
+
+    def think(self, user_request, screen_path, screen_desc, history_actions, **kwargs):
+        sys_rompt = self.prompts['THINK_DESC']['SYSTEM']
+
+        if history_actions: history_actions = ", ".join(history_actions)
+        else: history_actions = "None"
+        history_actions = history_actions + "."
+        
+        usr_prompt = self.prompts['THINK_DESC']['USER']
+        usr_prompt = usr_prompt.replace("{screen_desc}", screen_desc)
+        usr_prompt = usr_prompt.replace("{history_actions}", history_actions)
+        usr_prompt = usr_prompt.replace("{user_request}", user_request)
+        usr_prompt = [x.strip() for x in usr_prompt.split("{screenshot}")]
+
+        prompt = [
+            ("system", sys_rompt),
+            ("user", {"text": usr_prompt[0], "img_index": 0})
+        ]
+        for txt in usr_prompt[1:]: prompt.append(("user", {"text": txt}))
+        print("THINK")
+        print(prompt)
+        res, state = self.vlm.get_response(screen_path, prompt)
+        print("THINK RES", res)
+        return res, state
+
+    def action_with_memory(self, user_request, screen_path, ui_path, screen_desc, history_actions, action_plan, **kwargs):
+        sys_rompt = self.prompts['ACTION_DESC_WITH_MEMORY']['SYSTEM']
+
+        if history_actions: history_actions = ", ".join(history_actions)
+        else: history_actions = "None"
+        history_actions = history_actions + "."
+        
+        usr_prompt = self.prompts['ACTION_DESC_WITH_MEMORY']['USER']
+        usr_prompt = usr_prompt.replace("{screen_desc}", screen_desc)
+        usr_prompt = usr_prompt.replace("{history_actions}", history_actions)
+        usr_prompt = usr_prompt.replace("{user_request}", user_request)
+        usr_prompt = usr_prompt.replace("{future_action_plan}", str(action_plan))
+
+        usr_prompt = [x.strip() for x in usr_prompt.split("{screenshot}")]
+        assert len(usr_prompt)==2
+        prompt = [
+            ("system", sys_rompt),
+            ("user", {"text": usr_prompt[0], "img_index": 0})
+        ]
+        if ui_path is not None:
+            usr_prompt = [x.strip() for x in usr_prompt[1].split("{ui_element_image}")]
+            assert len(usr_prompt)==2
+            prompt.append(("user", {"text": usr_prompt[0], "img_index": 1}))
+
+            for txt in usr_prompt[1:]: prompt.append(("user", {"text": txt}))
+
+            res, state = self.vlm.get_response([screen_path, ui_path], prompt)
+        else:
+            for txt in usr_prompt[1:]: prompt.append(("user", {"text": txt.replace("{ui_element_image}", "Does not exist")}))
+            res, state = self.vlm.get_response(screen_path, prompt)
+
         return res, state
 
     def reflect_result(self, user_request, screen_path, next_screen_path, last_action, **kwargs):
@@ -113,6 +193,15 @@ class BaseAgent(object):
             try_num = 0
             while try_num < max_trials:
                 res, state = self.observe(user_request, image_path)
+                # save the observe 
+                observe_path = f"{save_dir}/{subset}-{episode_id}_{step_id}_0observe.json"
+                with open(observe_path, "w", encoding="utf-8") as f:
+                    json.dump(
+                        {
+                            "user_request":user_request, 
+                            "image_path":image_path, 
+                            "screen_desc": res
+                        }, f)
                 if state == HTTPStatus.OK: 
                     prev_anno['screen_desc'], update = res.strip(), True
                     break
@@ -129,9 +218,22 @@ class BaseAgent(object):
                 res, state = self.think_action(user_request, image_path, 
                                                screen_desc=prev_anno['screen_desc'], 
                                                history_actions=step_data['history_coat_actions'])
+                
                 if state == HTTPStatus.OK: 
                     try: 
                         response = json_parser(res)
+                        # save the think action
+                        think_action_path = f"{save_dir}/{subset}-{episode_id}_{step_id}_1think_action.json"
+                        with open(think_action_path, "w", encoding="utf-8") as f:
+                            json.dump(
+                                {
+                                    "user_request":user_request, 
+                                    "image_path":image_path, 
+                                    "screen_desc":prev_anno['screen_desc'],
+                                    "history_actions":step_data['history_coat_actions'],
+                                    "think_action": response
+                                }, f)
+                        
                         action_think = response['Thought']
                         action_plan = response['Future Action Plan']
                         action_desc = response['Next Single Step Action']
@@ -163,6 +265,18 @@ class BaseAgent(object):
                                                      screen_path=cur_image_path, 
                                                      next_screen_path=next_image_path, 
                                                      last_action=step_data['coat_action_desc'])
+                    # save the think action
+                    reflect_path = f"{save_dir}/{subset}-{episode_id}_{step_id}_2reflect.jsonl"
+                    with open(reflect_path, "a+", encoding="utf-8") as f:
+                        json.dump(
+                            {
+                                "user_request":user_request, 
+                                "screen_path":cur_image_path, 
+                                "next_screen_path":next_image_path,
+                                "last_action":step_data['coat_action_desc'],
+                                "reflect_result": res
+                            }, f)
+                        f.write("\n")
                     if state == HTTPStatus.OK: 
                         prev_anno['action_result'], update = res, True
                         break
@@ -178,6 +292,187 @@ class BaseAgent(object):
                 update = True
         if update: print(f"Updating [action_result] {save_path} ...")
         if update: json.dump(prev_anno, open(save_path, "w", encoding="utf-8"), indent=4)
+
+    def flow_with_memory(self, step_data, save_dir, max_trials=5):
+        subset, episode_id, step_id = step_data['subset'], step_data['episode_id'], step_data['step_id']
+        user_request, image_path = step_data['instruction'], step_data['image_full_path']
+
+        save_dir = os.path.join(save_dir, f"{subset}-{episode_id}")
+        if not os.path.exists(save_dir): os.makedirs(save_dir)
+        save_path = os.path.join(save_dir, f"{subset}-{episode_id}_{step_id}.json")
+        if not os.path.exists(save_path): json.dump({}, open(save_path, "w", encoding="utf-8"))
+
+        prev_anno = json.load(open(save_path, "r"))
+        # if 'action_result' not in prev_anno: return
+        # del prev_anno['action_result']
+        # json.dump(prev_anno, open(save_path, "w", encoding="utf-8"), indent=4)
+        # return
+
+        update = False
+        if 'screen_desc' not in prev_anno: 
+            print(f"Genearting [screen_desc] -> img_path {image_path}")
+            try_num = 0
+            while try_num < max_trials:
+                res, state = self.observe(user_request, image_path)
+                # save the observe 
+                observe_path = f"{save_dir}/{subset}-{episode_id}_{step_id}_0observe.json"
+                with open(observe_path, "w", encoding="utf-8") as f:
+                    json.dump(
+                        {
+                            "user_request":user_request, 
+                            "image_path":image_path, 
+                            "screen_desc": res
+                        }, f)
+                if state == HTTPStatus.OK: 
+                    prev_anno['screen_desc'], update = res.strip(), True
+                    break
+                try_num += 1
+                time.sleep(5)
+        if update: print(f"Updating [screen_desc] {save_path} ...")
+        if update: json.dump(prev_anno, open(save_path, "w", encoding="utf-8"), indent=4)
+        
+        update = False
+        if 'action_think' not in prev_anno:
+            print(f"Genearting [action_think] -> img_path {image_path}")
+            try_num = 0
+            while try_num < max_trials:
+                res, state = self.think(user_request, image_path, 
+                                        screen_desc=prev_anno['screen_desc'], 
+                                        history_actions=step_data['history_coat_actions'])
+                if state == HTTPStatus.OK: 
+                    try: 
+                        response = json_parser(res)
+                        # save the think action
+                        think_path = f"{save_dir}/{subset}-{episode_id}_{step_id}_1think.json"
+                        with open(think_path, "w", encoding="utf-8") as f:
+                            json.dump(
+                                {
+                                    "user_request":user_request, 
+                                    "image_path":image_path, 
+                                    "screen_desc":prev_anno['screen_desc'],
+                                    "history_actions":step_data['history_coat_actions'],
+                                    "think": response
+                                }, f)
+                        action_think = response['Thought']
+                        action_plan = response['Future Action Plan']
+                        # action_desc = response['Next Single Step Action']
+                        prev_anno['action_think'] = action_think
+                        prev_anno['action_plan'] = action_plan
+                        # prev_anno['action_desc'] = action_desc
+                        update = True
+                        break
+                    except Exception as e: 
+                        if not isinstance(e, json.decoder.JSONDecodeError): print(traceback.format_exc())
+                        else: print(res,"\n", save_path, "\n", sep="")
+                    break
+                print(f"Trial {try_num} failured! -- Status {state}")
+                try_num += 1
+                time.sleep(5)
+        if update: print(f"Updating [action_think] {save_path} ...")
+        if update: json.dump(prev_anno, open(save_path, "w", encoding="utf-8"), indent=4)
+        
+        update = False
+        if 'action_desc' not in prev_anno:
+            print(f"Genearting [action_desc] -> img_path {image_path}")
+            try_num = 0
+            while try_num < max_trials:
+                query = prev_anno['action_plan'][0]
+
+                doc = self.memory.rag.query(query, param=self.query_param)
+                if doc is None:
+                    ui_path = None
+                else:
+                    ui_path = doc[0]['image']
+                # save doc
+                query_path = f"{save_dir}/{subset}-{episode_id}_{step_id}_2query.json"
+                with open(query_path, "w", encoding="utf-8") as f:
+                    json.dump(
+                        {
+                            "query":query, 
+                            "result":doc[0] if doc is not None else None, 
+                        }, f)
+                prev_anno['relevant_ui_path'] = ui_path
+                print("ui_path", ui_path)
+                res, state = self.action_with_memory(user_request, image_path, ui_path,
+                                        screen_desc=prev_anno['screen_desc'], 
+                                        history_actions=step_data['history_coat_actions'],
+                                        action_plan=prev_anno['action_plan'])
+                if state == HTTPStatus.OK: 
+                    try: 
+                        response = json_parser(res)
+                        # save action_with_memory
+                        action_path = f"{save_dir}/{subset}-{episode_id}_{step_id}_3action_with_memory.json"
+                        with open(action_path, "w", encoding="utf-8") as f:
+                            json.dump(
+                                {
+                                    "user_request":user_request, 
+                                    "image_path":image_path, 
+                                    "ui_path":ui_path,
+                                    "screen_desc":prev_anno['screen_desc'], 
+                                    "history_actions":step_data['history_coat_actions'],
+                                    "action_plan":prev_anno['action_plan'],
+                                    "action_with_memory": response
+                                }, f)
+                        # action_think = response['Thought']
+                        # action_plan = response['Future Action Plan']
+                        action_desc = response['Next Single Step Action']
+                        # prev_anno['action_think'] = action_think
+                        # prev_anno['action_plan'] = action_plan
+                        prev_anno['action_desc'] = action_desc
+                        update = True
+                        break
+                    except Exception as e: 
+                        if not isinstance(e, json.decoder.JSONDecodeError): print(traceback.format_exc())
+                        else: print(res,"\n", save_path, "\n", sep="")
+                    break
+                print(f"Trial {try_num} failured! -- Status {state}")
+                try_num += 1
+                time.sleep(5)
+        if update: print(f"Updating [action_desc] {save_path} ...")
+        if update: json.dump(prev_anno, open(save_path, "w", encoding="utf-8"), indent=4)
+
+
+        update = False
+        if 'action_result' not in prev_anno:
+            print(f"Genearting [action_result] -> img_path {image_path}")
+            if step_data['result_action_type'] not in [10, 11]:
+                try_num = 0
+                cur_image_path, next_image_path = image_path, step_data['next_image_full_path']
+                while try_num < max_trials:
+                    cur_image_height = imagesize.get(cur_image_path)[1]
+                    next_image_height = imagesize.get(next_image_path)[1]
+                    res, state = self.reflect_result(user_request, 
+                                                     screen_path=cur_image_path, 
+                                                     next_screen_path=next_image_path, 
+                                                     last_action=step_data['coat_action_desc'])
+                    # save the think action
+                    reflect_path = f"{save_dir}/{subset}-{episode_id}_{step_id}_4reflect.jsonl"
+                    with open(reflect_path, "a+", encoding="utf-8") as f:
+                        json.dump(
+                            {
+                                "user_request":user_request, 
+                                "screen_path":cur_image_path, 
+                                "next_screen_path":next_image_path,
+                                "last_action":step_data['coat_action_desc'],
+                                "reflect_result": res
+                            }, f)
+                        f.write("\n")
+                    if state == HTTPStatus.OK: 
+                        prev_anno['action_result'], update = res, True
+                        break
+                    elif state == HTTPStatus.REQUEST_ENTITY_TOO_LARGE:
+                        cur_image_path = self.compress_image(image_path, max_height=int(0.8*cur_image_height))
+                        next_image_path = self.compress_image(step_data['next_image_full_path'], max_height=int(0.8*next_image_height))
+                    else: print(res)
+                    print(f"Trial {try_num} failured! -- Status {state}")
+                    try_num += 1
+                    time.sleep(5)
+            else: 
+                prev_anno['action_result'] = "The execution of user request is stopped."
+                update = True
+        if update: print(f"Updating [action_result] {save_path} ...")
+        if update: json.dump(prev_anno, open(save_path, "w", encoding="utf-8"), indent=4)
+
 
     def compress_image(self, image_path, max_height=1024, mode="scale"):
         org_img_path, ext = os.path.splitext(image_path)
@@ -262,10 +557,68 @@ class ScreenAgent(BaseAgent):
         
         return "\n".join(screen_str)
 
+    # def make_action(self, step_data, usr_prompt, save_dir, asst_prompt=None):
+    #     # Determine action mode and image path
+    #     action_mode = self.cfg.DEMO_MODE.upper()
+    #     image_path = step_data['image_full_path']
+
+    #     # Prepare UI elements
+    #     ui_elements = []
+    #     for org_bbox, txt, ui_class in zip(
+    #         step_data['ui_positions'], step_data['ui_text'], step_data['ui_types']):
+    #         ymin, xmin, h, w  = org_bbox
+    #         bbox = [xmin, ymin, xmin+w, ymin+h]
+    #         ui_elements.append({"bounds": bbox, "text": txt, "type": ui_class})
+    #     ui_elements = row_col_sort(ui_elements)
+    #     step_data['ui_elements'] = ui_elements
+
+    #     # Handle screen tag mode
+    #     if self.use_screen_tag:
+    #         sys_prompt = self.prompts['ACTION_PREDICT'][action_mode]['SYSTEM']['SCREEN_TAG']
+    #         action_space = self.prompts['ACTION_PREDICT']['ACTION_SPACE']['SCREEN_TAG']
+    #         sys_prompt = sys_prompt.replace("{action_space}", action_space)
+    #         tag_image_path = self.add_screen_tag(step_data, save_dir=save_dir)
+            
+    #         if self.cfg.MODEL.NAME == "openai":
+    #             image_path = self.compress_image(image_path, max_height=1440, mode="jpg")
+    #             tag_image_path = self.compress_image(tag_image_path, max_height=1440, mode="scale")
+
+    #         prompt = [
+    #             ("system", sys_prompt),
+    #             ("user", {"text": usr_prompt[0], "img_index": 0}),
+    #             ("user", {"text": "", "img_index": 1})
+    #         ]
+    #         for txt in usr_prompt[1:]: prompt.append(("user", {"text": txt}))
+    #         if asst_prompt: prompt.append(("assistant", {"text": asst_prompt}))
+    #         asst_res, state = self.vlm.get_response([image_path, tag_image_path], prompt)
+        
+    #     # Handle screen text mode
+    #     if self.use_screen_txt:
+    #         sys_prompt = self.prompts['ACTION_PREDICT'][action_mode]['SYSTEM']['SCREEN_TXT']
+    #         action_space = self.prompts['ACTION_PREDICT']['ACTION_SPACE']['SCREEN_TXT']
+    #         sys_prompt = sys_prompt.replace("{action_space}", action_space)
+    #         screen_txt = self.add_screen_txt(step_data)
+            
+    #         prompt = [
+    #             ("system", sys_prompt),
+    #             ("user", {"text": usr_prompt[0], "img_index": 0}),
+    #             ("user", {"text": f"<SCREEN ELEMENTS>: {screen_txt}"})
+    #         ]
+    #         for txt in usr_prompt[1:]: prompt.append(("user", {"text": txt}))
+    #         if asst_prompt: prompt.append(("assistant", {"text": asst_prompt}))
+    #         asst_res, state = self.vlm.get_response([image_path], prompt)
+
+    #     # Return assistant response
+    #     asst_head = asst_prompt if asst_prompt else ""         
+    #     return asst_head, asst_res, state
+
+    # make action with memory
     def make_action(self, step_data, usr_prompt, save_dir, asst_prompt=None):
+        # Determine action mode and image path
         action_mode = self.cfg.DEMO_MODE.upper()
         image_path = step_data['image_full_path']
 
+        # Prepare UI elements
         ui_elements = []
         for org_bbox, txt, ui_class in zip(
             step_data['ui_positions'], step_data['ui_text'], step_data['ui_types']):
@@ -275,6 +628,7 @@ class ScreenAgent(BaseAgent):
         ui_elements = row_col_sort(ui_elements)
         step_data['ui_elements'] = ui_elements
 
+        # Handle screen tag mode
         if self.use_screen_tag:
             sys_prompt = self.prompts['ACTION_PREDICT'][action_mode]['SYSTEM']['SCREEN_TAG']
             action_space = self.prompts['ACTION_PREDICT']['ACTION_SPACE']['SCREEN_TAG']
@@ -294,6 +648,7 @@ class ScreenAgent(BaseAgent):
             if asst_prompt: prompt.append(("assistant", {"text": asst_prompt}))
             asst_res, state = self.vlm.get_response([image_path, tag_image_path], prompt)
         
+        # Handle screen text mode
         if self.use_screen_txt:
             sys_prompt = self.prompts['ACTION_PREDICT'][action_mode]['SYSTEM']['SCREEN_TXT']
             action_space = self.prompts['ACTION_PREDICT']['ACTION_SPACE']['SCREEN_TXT']
@@ -309,8 +664,10 @@ class ScreenAgent(BaseAgent):
             if asst_prompt: prompt.append(("assistant", {"text": asst_prompt}))
             asst_res, state = self.vlm.get_response([image_path], prompt)
 
+        # Return assistant response
         asst_head = asst_prompt if asst_prompt else ""         
         return asst_head, asst_res, state
+
 
     def coa_action(self, step_data, *args, **kwargs):
         """ Chain of Action """
@@ -398,7 +755,9 @@ class ScreenAgent(BaseAgent):
         elif action_mode == "COAT": func_handler = self.coat_action
         else: raise NotImplementedError
 
-        if 'action_predict' not in cur_anno: cur_anno['action_predict'] = {}
+        if 'action_predict' not in cur_anno: 
+            cur_anno['action_predict'] = {}
+            # print(save_dir)
         if action_mode not in cur_anno['action_predict']: cur_anno['action_predict'][action_mode] = {}
         # if action_mode in cur_anno['action_predict']: 
         #     anno = cur_anno['action_predict'][action_mode]

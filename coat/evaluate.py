@@ -25,6 +25,7 @@ class ActionEvaluator(object):
         ]
     
     def action_map(self, action_api:str):
+# Map action API to action type
         if not action_api: return None
         action_api = action_api.lower()
         if action_api == "input": return "type"
@@ -33,6 +34,7 @@ class ActionEvaluator(object):
         return None
 
     def _parse_action_(self, pred, w, h):
+# Parse predicted action
         pr = pred.get('action_predict', {})
         if self.demo_mode not in pr: return (None,) * 6
 
@@ -66,6 +68,7 @@ class ActionEvaluator(object):
                pd_action_direction, pd_action_text, pd_action_button
 
     def _parse_answer_(self, gt):
+# Parse ground truth action
         gt_words = gt['coat_action_desc'].split(' ')
 
         gt_action_type = self.action_map(gt_words[0])
@@ -174,6 +177,7 @@ class ActionEvaluator(object):
         }
 
     def compute_episode_metrics(self, episode_results):
+# Compute metrics for an episode
         success, progress = [], []
         for __, eplist in episode_results.items():
             ep_success, ep_progress = True, 0
@@ -188,6 +192,7 @@ class ActionEvaluator(object):
                 "goal_progress": round(sum(progress) / len(progress), 4)}
 
     def compute_atomic_metrics(self, step_results):
+# Compute atomic metrics for each step
         recorder = {
             'total':  {'count':0, 'type_match':0, 'exact_match':0, "hit": 0}, 
             # -------------------------------------------

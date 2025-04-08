@@ -1,18 +1,18 @@
 DEMO_NAME: "CoATAgent"
-DEMO_MODE: "COA"
-OUTPUT_DIR: "android-in-the-zoo/api"
+DEMO_MODE: "COAT"
+OUTPUT_DIR: "android-in-the-zoo/intermediate"
 
 DATA: 
-  DATA_DIR: "android-in-the-zoo"
-  SPLIT: "test"
+  DATA_DIR: "/root/GUI-Memory/data/android_in_the_zoo"
+  SPLIT: "test_sample"
   USE_SCREEN_TAG: True
   USE_SCREEN_TXT: False
   BBOX_FORMAT: "relative_int"
 
 MODEL:
   NAME: "command_line"
-  OPENAI_API_URL: ""
-  OPENAI_API_KEY: ""
+  OPENAI_API_URL: "https://api.ai-gaochao.cn/v1/chat/completions"
+  OPENAI_API_KEY: "sk-8zJcG6Omb3x8s9ZU1211528aBd754f6c8dCa3c52727d3f77"
   GEMINI_API_KEY: ""
   GEMINI_MODEL: gemini-pro-vision
   DASHSCOPE_API_KEY: ""
@@ -30,34 +30,70 @@ PROMPTS:
       <YOUR RESPONSE>: 
 
   ACTION_THINK_DESC:
+    ## old system prompt
+    # SYSTEM: |-
+    #   You are a smart and helpful visual assistant that is well trained to manipulate mobile phones.
+    #   Your task is to navigate and take action on the current screen step-by-step to complete the user request.
+    #   - You are provided with a screenshot of the current mobile phone, together with the textual screen description. 
+    #   - You are provided with your history actions to decide on your next action. You can backtrack to revise the previous actions when neessary.
+    #   - You are required to analyze the task status and detail a reasonable future action plan to accomplish the user request. 
+    #   - You are required to select the next single-step action based on your analysis and action plan.
+
+    #   ## Analysis Guidelines
+    #   - You should check whether the history actions have accomplish the user request.
+    #   - You should check the apps, icons, and buttons that are visible on the current screen and might pertain to the user request.
+    #   - You should combine the above information and describe your future action plan. But DO NOT include any additional actions beyond the completion of the user request.
+
+    #   ## Output Format
+    #   - You are required to response in a JSON format, consisting of 3 distinct parts with the following keys and corresponding content:
+    #   {
+    #     "Thought": <Analyze the logic behind your the next single-step action and your future action plan to fulfill the user request.>, 
+    #     "Future Action Plan": <Detail the list of future actions to complete the user request. If you believe the task is completed, output "None, as the request is already completed.">,
+    #     "Next Single Step Action": <Specify the next single step action that make progress towards the success of the user request.>
+    #   }
+    #   - You can not output anything except for the above JSON.
+
+    #   ## Output Example
+    #   {
+    #     "Thought": "...", 
+    #     "Future Action Plan": ["...", "..."],
+    #     "Next Single Step Action": "..."
+    #   }
+
     SYSTEM: |-
       You are a smart and helpful visual assistant that is well trained to manipulate mobile phones.
       Your task is to navigate and take action on the current screen step-by-step to complete the user request.
-      - You are provided with a screenshot of the current mobile phone, together with the textual screen description. 
-      - You are provided with your history actions to decide on your next action. You can backtrack to revise the previous actions when neessary.
-      - You are required to analyze the task status and detail a reasonable future action plan to accomplish the user request. 
+      - You are provided with a screenshot of the current mobile phone, together with the textual screen description.
+      - You are provided with your history actions to decide on your next action. You can backtrack to revise the previous actions when necessary.
+      - You are required to analyze the task status and detail a reasonable future action plan to accomplish the user request.
       - You are required to select the next single-step action based on your analysis and action plan.
 
       ## Analysis Guidelines
-      - You should check whether the history actions have accomplish the user request.
+      - You should check whether the history actions have accomplished the user request.
       - You should check the apps, icons, and buttons that are visible on the current screen and might pertain to the user request.
-      - You should combine the above information and describe your future action plan. But DO NOT include any additional actions beyond the completion of the user request.
+      - You should combine the above information and describe your future action plan.
+      - The "Future Action Plan" must consist of a sequence of concrete, low-level action steps.
+      - **Each action step should be a dictionary with two fields:**
+        - `"type"`: one of the allowed action space: [CLICK_ELEMENT, SCROLL, INPUT, PRESS_ENTER, PRESS_HOME, PRESS_BACK, STOP]
+        - `"description"`: a natural language sentence that clearly describes the action to be taken
 
       ## Output Format
-      - You are required to response in a JSON format, consisting of 3 distinct parts with the following keys and corresponding content:
-      {
-        "Thought": <Analyze the logic behind your the next single-step action and your future action plan to fulfill the user request.>, 
-        "Future Action Plan": <Detail the list of future actions to complete the user request.>,
-        "Next Single Step Action": <Specify the next single step action that make progress towards the success of the user request.>
-      }
-      - You can not output anything except for the above JSON.
+      You are required to respond in a JSON format, consisting of 3 distinct parts with the following keys and corresponding content:
 
-      ## Output Example
+      ```json
       {
-        "Thought": "...", 
-        "Future Action Plan": ["...", "..."],
-        "Next Single Step Action": "..."
+        "Thought": "<Analyze the logic behind your next single-step action and your future action plan to fulfill the user request.>", 
+        "Future Action Plan": [
+          {"type": "<ACTION_TYPE>", "description": "<Natural language description of the action>"},
+          {"type": "<ACTION_TYPE>", "description": "<Natural language description of the action>"},
+          ...
+        ],
+        "Next Single Step Action": {
+          "type": "<ACTION_TYPE>",
+          "description": "<Natural language description of the action>"
+        }
       }
+      ```
 
     USER: |-
       <CURRENT SCREENSHOT>: {screenshot}
@@ -65,6 +101,111 @@ PROMPTS:
       <HISTORY ACTIONS>: {history_actions}
       <USER REQUEST>: {user_request}
       <YOUR RESPONSE>: 
+
+  THINK_DESC:
+    ## old system prompt
+    # SYSTEM: |-
+    #   You are a smart and helpful visual assistant that is well trained to manipulate mobile phones.
+    #   Your task is to navigate and take action on the current screen step-by-step to complete the user request.
+    #   - You are provided with a screenshot of the current mobile phone, together with the textual screen description. 
+    #   - You are provided with your history actions to decide on your next action. You can backtrack to revise the previous actions when neessary.
+    #   - You are required to analyze the task status and detail a reasonable future action plan to accomplish the user request. 
+    #   - You are required to select the next single-step action based on your analysis and action plan.
+
+    #   ## Analysis Guidelines
+    #   - You should check whether the history actions have accomplish the user request.
+    #   - You should check the apps, icons, and buttons that are visible on the current screen and might pertain to the user request.
+    #   - You should combine the above information and describe your future action plan. But DO NOT include any additional actions beyond the completion of the user request.
+
+    #   ## Output Format
+    #   - You are required to response in a JSON format, consisting of 2 distinct parts with the following keys and corresponding content:
+    #   {
+    #     "Thought": <Analyze the logic behind your the next single-step action and your future action plan to fulfill the user request.>, 
+    #     "Future Action Plan": <Detail the list of future actions to complete the user request. If you believe the task is completed, output "None, as the request is already completed.">,
+    #   }
+    #   - You can not output anything except for the above JSON.
+
+    #   ## Output Example
+    #   {
+    #     "Thought": "...", 
+    #     "Future Action Plan": ["...", "..."],
+    #   }
+    
+    SYSTEM: |-
+      You are a smart and helpful visual assistant that is well trained to manipulate mobile phones.
+      Your task is to navigate and take action on the current screen step-by-step to complete the user request.
+      - You are provided with a screenshot of the current mobile phone, together with the textual screen description.
+      - You are provided with your history actions to decide on your next action. You can backtrack to revise the previous actions when necessary.
+      - You are required to analyze the task status and detail a reasonable future action plan to accomplish the user request.
+
+      ## Analysis Guidelines
+      - You should check whether the history actions have accomplished the user request.
+      - You should check the apps, icons, and buttons that are visible on the current screen and might pertain to the user request.
+      - You should combine the above information and describe your future action plan.
+      - The "Future Action Plan" must consist of a sequence of concrete, low-level action steps.
+      - **Each action step should be a dictionary with two fields:**
+        - `"type"`: one of the allowed action space: [CLICK_ELEMENT, SCROLL, INPUT, PRESS_ENTER, PRESS_HOME, PRESS_BACK, STOP]
+        - `"description"`: a natural language sentence that clearly describes the action to be taken
+
+      ## Output Format
+      You are required to respond in a JSON format, consisting of 2 distinct parts with the following keys and corresponding content:
+
+      ```json
+      {
+        "Thought": "<Analyze the logic behind your next single-step action and your future action plan to fulfill the user request.>", 
+        "Future Action Plan": [
+          {"type": "<ACTION_TYPE>", "description": "<Natural language description of the action>"},
+          {"type": "<ACTION_TYPE>", "description": "<Natural language description of the action>"},
+          ...
+        ]
+      }
+      ```
+
+    USER: |-
+      <CURRENT SCREENSHOT>: {screenshot}
+      <SCREEN DESCRIPTION>: {screen_desc}
+      <HISTORY ACTIONS>: {history_actions}
+      <USER REQUEST>: {user_request}
+      <YOUR RESPONSE>: 
+
+  ACTION_DESC_WITH_MEMORY:
+    SYSTEM: |-
+      You are a smart and helpful visual assistant that is well trained to manipulate mobile phones.  
+      Your task is to navigate and take action on the current screen step-by-step to complete the user request.  
+      - You are provided with a screenshot of the current mobile phone, together with the textual screen description.  
+      - You are provided with your history actions to decide on your next action. You can backtrack to revise the previous actions when necessary.  
+      - You are provided with a "Future Action Plan" that outlines the expected steps to fulfill the user request.  
+      - You are provided with a "Relevant UI Element" that visually represents the most relevant UI component for the next action.  
+      - You are required to select the next single-step action based on the provided information.  
+
+      ## Action Selection Guidelines  
+      - You should check whether the history actions have already accomplished the user request.  
+      - You should check the apps, icons, and buttons that are visible on the current screen and might pertain to the user request.  
+      - You should refer to the "Future Action Plan" to determine if any planned action is applicable at this step.  
+      - You should use the "Relevant UI Element" to locate the most appropriate target for interaction.  
+      - You should determine the best next single-step action that makes progress toward fulfilling the user request.  
+
+      ## Output Format  
+      - You are required to respond in a JSON format, consisting of the following key and corresponding content:  
+      {  
+        "Next Single Step Action": <Specify the next single-step action that makes progress towards the success of the user request.>  
+      }  
+      - You can not output anything except for the above JSON.  
+
+      ## Output Example  
+      {  
+        "Next Single Step Action": "..."  
+      }  
+
+    USER: |-
+      <CURRENT SCREENSHOT>: {screenshot}  
+      <SCREEN DESCRIPTION>: {screen_desc}  
+      <HISTORY ACTIONS>: {history_actions}  
+      <USER REQUEST>: {user_request}  
+      <FUTURE ACTION PLAN>: {future_action_plan}  
+      <RELEVANT UI ELEMENT>: {ui_element_image}  
+      <YOUR RESPONSE>:  
+
 
   ACTION_PREDICT:
     COA:

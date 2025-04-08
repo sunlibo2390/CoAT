@@ -1,0 +1,21 @@
+{
+    "screen_desc": "The screenshot shows a mobile home screen with a search bar at the top, featuring icons for several apps below. Prominent apps include Chrome, Gmail, Calendar, Settings, Contacts, and Google Maps. There are also various app icons with generic blue and white designs, likely representing system or test apps. The layout follows a standard Android interface with a bottom navigation bar for phone, search, and additional app access.",
+    "action_think": "The user is looking to search for seafood restaurants on Google Maps. Based on the current screen, the Google Maps icon is visible, and it is the most relevant app for this task. The next step is to open Google Maps to initiate the search.",
+    "action_plan": [
+        "Open Google Maps",
+        "Search for seafood restaurants within the app"
+    ],
+    "action_desc": "Tap on the Google Maps icon",
+    "action_result": "By clicking on the \"Maps\" app, the Google Maps application has opened, as shown in the current screenshot. The screen now displays the search bar labeled \"Search here,\" which allows for inputting queries. This action moves the process forward because you can now type your query for seafood restaurants directly into the search bar. This is a necessary step in fulfilling the user request to search for seafood restaurants on Google Maps.",
+    "prev_action_result": "By scrolling up, the map interface in the Google Maps app has been revealed, potentially showing more options for zooming in or out, or uncovering additional information such as search results or menu options.\n\nThis action helps in progressing toward the user's request of finding seafood restaurants on Google Maps. Since the map view is now more accessible, it is likely that the user can search directly for seafood restaurants by typing a query or using voice search, further advancing towards the goal. However, additional steps like tapping the search bar or entering the specific query are still necessary to complete the task.",
+    "action_predict": {
+        "COAT": {
+            "tag": {
+                "ACTION": "click_element",
+                "ARGS": {
+                    "idx": 30
+                }
+            }
+        }
+    }
+}

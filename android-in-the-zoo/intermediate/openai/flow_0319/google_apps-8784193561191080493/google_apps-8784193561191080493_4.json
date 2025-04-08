@@ -1,0 +1,22 @@
+{
+    "screen_desc": "The screenshot shows the Google search interface on a smartphone. It displays a search bar at the top, where the user can search for locations or businesses. Below, \"Today\" shows a recent search for \"pizza restaurant.\" The \"Previous Searches\" section lists past searches with their statuses (e.g., closed or opening hours), including saved locations like Springwood Apartments, DMV Office, and Dollar Tree. At the top, icons for Home and Work locations are also visible.",
+    "action_think": "The user is on the Google search interface, having clicked on the search bar. Since the user wants to search for seafood restaurants, the next step is to enter the search term into the search bar to begin the search. The Google Maps app is already opened, which is suitable for performing this task.",
+    "action_plan": [
+        "Enter 'seafood restaurants' into the search bar",
+        "Press 'Search' to perform the search",
+        "View the results for seafood restaurants"
+    ],
+    "action_desc": "Enter 'seafood restaurants' into the search bar",
+    "action_result": "By typing \"seafood restaurants\" into the search bar, I have entered the search query. This allows the user to now search for seafood restaurants on Google Maps. The next step would involve confirming the search, which will display relevant results for seafood restaurants on the map. This action has directly advanced the user's request.",
+    "prev_action_result": "By clicking on the search bar located at the top middle, the phone is now ready for input. This action allows the user to enter their search query for seafood restaurants. This is a crucial step towards fulfilling the user request, as the next step would be typing \"seafood restaurants\" into the search bar and conducting the search on Google Maps. Therefore, progress has been made towards completing the user request.",
+    "action_predict": {
+        "COAT": {
+            "tag": {
+                "ACTION": "INPUT",
+                "ARGS": {
+                    "text": "seafood restaurants"
+                }
+            }
+        }
+    }
+}

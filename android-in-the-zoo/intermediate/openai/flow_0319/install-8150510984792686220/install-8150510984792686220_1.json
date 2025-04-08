@@ -1,0 +1,21 @@
+{
+    "screen_desc": "The screenshot shows a home screen on an Android phone. At the top, there's a Google search bar followed by app icons including Spotify, Messages, Play Store, and McDonald's. Below are rows of app icons such as Adobe Acrobat, Airtel, Booking, Chrome, Camera, and eBay. The bottom section includes apps like Duolingo, Drive, and Excel, with a search bar visible on the far right side.",
+    "action_think": "The current screen shows the home screen with various app icons, but there is no direct visible Gmail app. The next logical step is to either find the Gmail app in the app drawer or use the search function to locate it. The search bar is visible on the right side of the screen, which can be used to search for the Gmail app quickly.",
+    "action_plan": [
+        "Swipe up to open the app drawer",
+        "Use the search bar to locate Gmail",
+        "Open the Gmail app once found"
+    ],
+    "action_desc": "Swipe up to open the app drawer",
+    "action_result": "By clicking on the \"Gmail\" app, the app has now opened and is displaying the welcome screen with the message \"New in Gmail\" along with the fresh new look. This is the expected behavior, as the user requested to open the \"Gmail\" app. Therefore, the action has successfully progressed towards fulfilling the user\u2019s request.",
+    "action_predict": {
+        "COAT": {
+            "tag": {
+                "ACTION": "scroll",
+                "ARGS": {
+                    "direction": "up"
+                }
+            }
+        }
+    }
+}

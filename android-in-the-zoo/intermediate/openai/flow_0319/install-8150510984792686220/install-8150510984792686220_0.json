@@ -1,0 +1,20 @@
+{
+    "screen_desc": "The screenshot shows a smartphone home screen with a pink gradient background. It displays the current date \"Monday, Aug\" at the top and the time \"4:05.\" There are two app icons: Google Maps on the left and Google Chrome on the right. At the bottom, there is a Google search bar with a voice search icon on the right.",
+    "action_think": "The current screen shows the home screen of the smartphone with app icons for Google Maps and Google Chrome. The user has requested to open the Gmail app, which is not currently visible on this screen. To fulfill this request, I need to either search for Gmail or swipe through additional screens to find it.",
+    "action_plan": [
+        "Swipe up to access the app drawer and look for the Gmail app.",
+        "Once Gmail is found, tap to open it."
+    ],
+    "action_desc": "Swipe up to access the app drawer.",
+    "action_result": "By scrolling up, the app icons in the app drawer have moved upwards, revealing more apps on the screen. This action has made progress towards opening the Gmail app, as more apps are now visible, and you are likely closer to locating and opening the Gmail app. However, Gmail is not yet visible in the current screen, so the next step would be to continue scrolling until the Gmail app is located and then tap on it.",
+    "action_predict": {
+        "COAT": {
+            "tag": {
+                "ACTION": "scroll",
+                "ARGS": {
+                    "direction": "up"
+                }
+            }
+        }
+    }
+}

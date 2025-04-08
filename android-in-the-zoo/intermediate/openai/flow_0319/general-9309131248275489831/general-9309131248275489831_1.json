@@ -1,0 +1,20 @@
+{
+    "screen_desc": "The screenshot displays a Google search screen with a search bar at the top, where users can input queries. It shows a list of recent search suggestions, including queries about a new blush, flights, Thai restaurants, and bicycle speed. Below the search bar, there are icons for several apps, such as Clock, YouTube, Gmail, Photos, and Calendar. The phone interface is simple and allows easy access to various apps and the search feature.",
+    "action_think": "The user is asking about apartment rental prices in Portland, which requires searching for relevant information. Since the search bar is already selected, the next step is to type the query in the search bar and initiate the search.",
+    "action_plan": [
+        "Type 'how much does a 2 bedroom apartment rent for in Portland' into the search bar.",
+        "Press the 'Enter' key or search icon to initiate the search."
+    ],
+    "action_desc": "Type 'how much does a 2 bedroom apartment rent for in Portland' into the search bar.",
+    "action_result": "By typing in the content \"2 bedroom apartment rent for in Portland,\" a search query has been entered into the input field. This action is a crucial step towards fulfilling the user's request, as it allows the search engine to retrieve relevant rental listings and price information. The next step would be to analyze the search results to determine the rental prices of 2-bedroom apartments in Portland.",
+    "action_predict": {
+        "COAT": {
+            "tag": {
+                "ACTION": "input",
+                "ARGS": {
+                    "text": "how much does a 2 bedroom apartment rent for in Portland"
+                }
+            }
+        }
+    }
+}

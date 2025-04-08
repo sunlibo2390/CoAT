@@ -1,0 +1,32 @@
+{
+    "user_request": "Clear the cart on walmart. Add usb-b to the cart on walmart",
+    "image_path": "/root/GUI-Memory/data/android_in_the_zoo/test_sample/web_shopping/WEB_SHOPPING-6103848521248123387/WEB_SHOPPING-6103848521248123387_17.png",
+    "screen_desc": "The screenshot shows a Walmart mobile website page displaying a product for sale: a 5-pack Monoprice USB Type-A to USB Type-B 2.0 Cable. The price is $44.99, and it has 167 customer reviews. The user can add the item to their cart by selecting the \"+\" button. A promotional banner for the Walmart app is also visible at the bottom, with an option to download the app.",
+    "history_actions": [
+        "click on the Chrome app icon located at the bottom right.",
+        "press the back button",
+        "click on the address bar located at the top middle.",
+        "type in the content: \"walmart.com\"",
+        "click on the first search suggestion \"walmart.com\" located just below the search bar",
+        "click on the search icon (a magnifying glass) located at the middle and upper part of the screen.",
+        "click on the cancel button located at the top right.",
+        "click on the shopping cart icon located at the top right.",
+        "click on the \"Remove\" button located at the lower left.",
+        "click on the cart icon located at the middle and upper part of the screen.",
+        "type in the content: \"usb-b\"",
+        "click on the \"usb-b\" search result located at upper left.",
+        "scroll up",
+        "scroll up",
+        "scroll up",
+        "scroll up",
+        "click on the \"Add\" button located at the right and lower middle part of the screen."
+    ],
+    "think_action": {
+        "Thought": "The user has successfully added a USB-B item to the cart and cleared the previous cart contents by following the history actions. The next action would be to verify the cart contents and ensure that the desired item is added to the cart before completing the process.",
+        "Future Action Plan": [
+            "Verify the cart has the desired USB-B item.",
+            "Proceed with any further steps if required, such as checkout."
+        ],
+        "Next Single Step Action": "Click on the shopping cart icon located at the top right to verify the cart contents."
+    }
+}

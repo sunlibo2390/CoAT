@@ -1,0 +1,23 @@
+{
+    "screen_desc": "It seems like the image you uploaded is not visible right now. Could you try re-uploading it? I'll be happy to assist you with the description once it's available!",
+    "action_think": "The current screen shows the YouTube app with the search bar active. The user wants to play a specific video by Justin Bieber, so the next step is to enter the search term 'Justin Bieber' and proceed with the search to find the latest video.",
+    "action_plan": [
+        "Enter 'Justin Bieber' in the search bar",
+        "Press the search button",
+        "Locate and select the new Justin Bieber video",
+        "Play the video"
+    ],
+    "action_desc": "Enter 'Justin Bieber' in the search bar",
+    "action_result": "By clicking on the search bar, the interface is now ready for you to enter a query. The search bar is visible at the top of the screen, and it allows you to type in the title of the video you're looking for. This is a necessary step because you need to search for the specific Justin Bieber video on YouTube to play it.\n\nThis action is a direct progress toward your request, as you can now type in \"Justin Bieber\" and find his latest video on YouTube. Once you search, you'll be able to select and play the video.",
+    "prev_action_result": "By clicking on the search icon located at the top right, the search bar has been activated, allowing you to type and search for specific content. This is an essential step toward fulfilling your request to play the new Justin Bieber video on YouTube. Now, you can type \"Justin Bieber new video\" into the search field and proceed to find and play the video. This action has made progress toward completing your request.",
+    "action_predict": {
+        "COAT": {
+            "tag": {
+                "ACTION": "input",
+                "ARGS": {
+                    "text": "Justin Bieber new video"
+                }
+            }
+        }
+    }
+}

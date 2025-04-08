@@ -91,25 +91,38 @@ class AITZDataset(object):
 def sinle_run_flow(agent:ScreenAgent, step_data:dict, save_dir:str):
     agent.flow(step_data, save_dir=save_dir)
 
+def sinle_run_flow_with_memory(agent:ScreenAgent, step_data:dict, save_dir:str):
+    agent.flow_with_memory(step_data, save_dir=save_dir)
+
 
 def sinle_run_predict(agent:ScreenAgent, step_data:dict, save_dir:str):
     agent.predict(step_data, save_dir=save_dir)
 
 
-def collect(cfg, num_threads=2, task="flow"):
+def collect(cfg, num_threads=2, task="flow", memory=None):
     # cfg.MODEL.NAME = "openai"
     if task == "flow": todo_task = sinle_run_flow 
+    if task == "flow_with_memory": todo_task = sinle_run_flow_with_memory 
     if task == "predict": todo_task = sinle_run_predict
     
-    if cfg.MODEL.NAME in ["gemini", "openai"]:
-        print("using proxy ... ")
-        os.environ['http_proxy'] = "your_proxy"
-        os.environ['https_proxy'] = "your_proxy"
+    # if cfg.MODEL.NAME in ["gemini", "openai"]:
+    #     print("using proxy ... ")
+    #     os.environ['http_proxy'] = "your_proxy"
+    #     os.environ['https_proxy'] = "your_proxy"
     
-    aitz = AITZDataset(cfg.DATA.SPLIT, cfg.DATA.DATA_DIR, ratio=0.1, double_sample=False)
+    # aitz = AITZDataset(cfg.DATA.SPLIT, cfg.DATA.DATA_DIR, ratio=0.1, double_sample=False)
+    aitz = AITZDataset(cfg.DATA.SPLIT, cfg.DATA.DATA_DIR, ratio=1, double_sample=False)
+
     print(len(aitz), len(aitz.episode_data))
 
-    save_dir = os.path.join(cfg.OUTPUT_DIR, cfg.MODEL.NAME)
+    # save_dir = os.path.join(cfg.OUTPUT_DIR, cfg.MODEL.NAME)
+    if task != "predict":
+        save_dir = f"{cfg.OUTPUT_DIR}/{cfg.MODEL.NAME}/{task}"
+    else:
+        if memory:
+            save_dir = f"{cfg.OUTPUT_DIR}/{cfg.MODEL.NAME}/flow_with_memory"
+        else:
+            save_dir = f"{cfg.OUTPUT_DIR}/{cfg.MODEL.NAME}/flow"
     agent = ScreenAgent(config=cfg)
 
     before_count = threading.active_count() + 1
@@ -156,7 +169,8 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="CoAT Demo")
     parser.add_argument("--config-file", default="coat/config.yaml", metavar="FILE",  help="path to config file",)
-    parser.add_argument("--task", default="eval", type=str, choices=['try', 'flow', 'predict', 'eval'])
+    parser.add_argument("--task", default="eval", type=str, choices=['try', 'flow', 'flow_with_memory', 'predict', 'eval'])
+    parser.add_argument("--memory", action='store_true', default=False, help="use memory")
     parser.add_argument("--num-threads", default=1, type=int, help="number of threads")
     parser.add_argument("--seed", default=2020, type=int, help="random seed")
     parser.add_argument("opts", help="Modify config options using the command-line",
@@ -167,9 +181,10 @@ if __name__ == "__main__":
 
     cfg = CN(yaml.safe_load(open(args.config_file)))    
     cfg.merge_from_list(args.opts)
+    # print(cfg)
 
     if args.task == "try": 
         try_model(cfg)
-    if args.task in ['flow', 'predict']: 
-        collect(cfg, num_threads=args.num_threads, task=args.task)
+    if args.task in ['flow', 'flow_with_memory', 'predict']: 
+        collect(cfg, num_threads=args.num_threads, task=args.task, memory=args.memory)
 

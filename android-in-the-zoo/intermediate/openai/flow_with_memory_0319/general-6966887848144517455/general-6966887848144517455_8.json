@@ -1,0 +1,21 @@
+{
+    "screen_desc": "The screenshot shows a Google search for \"good Indian restaurants\" in Mountain View, CA. The results display a list of Indian restaurants with ratings, distance, and additional details such as their operating hours and descriptions. Three restaurants, \"Hyderabad Dum Biryani,\" \"Mantra India,\" and \"Zareen's Mountain View,\" are listed with their respective ratings and customer reviews. The user can filter the results by categories like \"Top rated,\" \"Indian,\" and service options like \"Dine-in,\" \"Takeout,\" or \"Delivery.\"",
+    "action_think": "The user has already performed a search for good Indian restaurants. The results are displayed on the screen, showing several restaurants along with their ratings and other details. The user may want to view more information or select a restaurant from the results.",
+    "action_plan": [
+        "Select one of the listed restaurants to view more details."
+    ],
+    "relevant_ui_path": "/root/GUI-Memory/data/android_in_the_zoo/train_ui_image/google_apps_GOOGLE_APPS-7177822086172972573_6.png",
+    "action_desc": "Select one of the listed restaurants to view more details.",
+    "action_result": "By scrolling up, more results related to good Indian restaurants have become visible on the screen. This action helps in completing the user's request by revealing additional restaurant options and related images, allowing for a more informed choice.",
+    "prev_action_result": "By clicking on the search suggestion located at the top left, the user is now directed to a Google search results page for \"good Indian restaurants\" in the area of Mountain View, CA. The results show a list of recommended restaurants, complete with ratings, distances, and options for further details such as dine-in, takeout, and delivery. \n\nThis action has significantly progressed towards fulfilling the user's request to search for good Indian restaurants, as it now displays relevant restaurants along with additional helpful information like location and reviews.",
+    "action_predict": {
+        "COAT": {
+            "tag": {
+                "ACTION": "click_element",
+                "ARGS": {
+                    "idx": 0
+                }
+            }
+        }
+    }
+}

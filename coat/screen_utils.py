@@ -3,7 +3,7 @@ from PIL import Image, ImageDraw, ImageFont
 from functools import cmp_to_key
 import numpy as np
 
-FONT_PATH = "/System/Library/Fonts/Helvetica.ttc"
+FONT_PATH = "/root/GUI-Memory/CoAT/Fonts/Helvetica.ttc"
 
 # ========================================================================================
 

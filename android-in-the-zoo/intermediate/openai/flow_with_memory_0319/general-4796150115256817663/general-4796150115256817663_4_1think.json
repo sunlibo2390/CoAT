@@ -1,0 +1,17 @@
+{
+    "user_request": "Where can I buy a nice beach cooler?",
+    "image_path": "/root/GUI-Memory/data/android_in_the_zoo/test_sample/general/GENERAL-4796150115256817663/GENERAL-4796150115256817663_4.png",
+    "screen_desc": "The screenshot shows a mobile device with a search bar at the top. The user has typed the query \"Where can I buy a nice beach cooler?\" The screen is currently empty, indicating that no search results have been displayed yet. The search bar is active, allowing the user to modify or submit the query. The mobile interface includes typical navigation elements at the bottom.",
+    "history_actions": [
+        "scroll up",
+        "click on the Chrome app located at the middle and upper part of the screen.",
+        "click on the search bar located at the top-middle part of the screen.",
+        "type in the content: \"Where can I buy a nice beach cooler?\""
+    ],
+    "think": {
+        "Thought": "The user has entered their search query, but no search results have been displayed yet. The next logical step is to trigger the search by tapping the 'search' icon or pressing 'enter' to see the results for the query.",
+        "Future Action Plan": [
+            "Tap the search icon or press the 'enter' key to initiate the search and display results."
+        ]
+    }
+}

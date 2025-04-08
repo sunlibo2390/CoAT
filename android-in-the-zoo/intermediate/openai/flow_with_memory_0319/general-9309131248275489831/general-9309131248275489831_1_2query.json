@@ -1,0 +1,14 @@
+{
+    "query": "Type '2 bedroom apartment rent in Portland' into the Google search bar and press enter.",
+    "result": {
+        "doc_id": "doc-475ce63e55481e84073dc000ed286eae",
+        "chunks": "\n----\nclick on the rentcafe link to view rental listings and obtain information about apartments for rent in portland.",
+        "content": "click on the rentcafe link to view rental listings and obtain information about apartments for rent in portland.",
+        "attribute": {
+            "location_description": "Relative Location: The search result from RentCafe is in the upper-middle part of the screen, below the Google search bar and above the \"People also ask\" section.\nAbsolute Location: It is located around the middle-upper area of the screen.",
+            "shape_description": "The RentCafe search result is a rectangular box with rounded corners containing the title \"3 Bedroom Apartments for Rent in Portland, OR\" and additional information about available rentals."
+        },
+        "image": "/root/GUI-Memory/data/android_in_the_zoo/train_ui_image/general_GENERAL-6266401360485978300_8.png",
+        "confidence": 1
+    }
+}

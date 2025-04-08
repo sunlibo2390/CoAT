@@ -1,0 +1,10 @@
+{
+    "screen_desc": "The screenshot shows the mobile data usage settings on a smartphone. It indicates that 136 kB of data has been used with a visual progress bar, and there's a note for a 2.00 GB data warning along with a countdown of 27 days left in the data cycle. The settings also include toggles for \"Mobile data\" (which is currently switched on) and \"Roaming\" (which is not visible in the screenshot). The phone is connected to the T-Mobile network, as indicated by the carrier name on the top left.",
+    "action_think": "The user has already navigated to the 'Mobile network' settings, which is part of the network settings. The current screen shows the mobile data usage and options related to mobile data, but we need to access additional network-related settings. The next step is to either scroll down or interact with available options to proceed further into network settings.",
+    "action_plan": [
+        "Scroll down to explore more network settings",
+        "Look for options related to Wi-Fi, data roaming, or VPN if needed"
+    ],
+    "action_desc": "Scroll down to explore additional network settings",
+    "action_result": "The execution of user request is stopped."
+}

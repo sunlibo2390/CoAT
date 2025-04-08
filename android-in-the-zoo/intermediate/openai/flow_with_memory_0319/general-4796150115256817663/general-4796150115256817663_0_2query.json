@@ -1,0 +1,19 @@
+{
+    "query": "Tap on the Google Chrome app to open it and begin the search for a beach cooler.",
+    "result": {
+        "doc_id": "doc-a8d751069bb14c266a8e51d37e09dc46",
+        "chunks": "\n----\nclick on the google chrome icon to open a web browser for searching where to buy a nice beach bag or click on the google app to search for online stores or local retailers selling beach totes.",
+        "content": "click on the google chrome icon to open a web browser for searching where to buy a nice beach bag or click on the google app to search for online stores or local retailers selling beach totes.",
+        "attribute": {
+            "location": [
+                "bottom-right part of the screen",
+                "bottom-left corner, slightly to the right"
+            ],
+            "shape": [
+                "a multicolored circle composed of blue, red, yellow and green segments"
+            ]
+        },
+        "image": "/root/GUI-Memory/data/android_in_the_zoo/train_ui_image/general_GENERAL-5403997372438098850_3.png",
+        "confidence": 1
+    }
+}

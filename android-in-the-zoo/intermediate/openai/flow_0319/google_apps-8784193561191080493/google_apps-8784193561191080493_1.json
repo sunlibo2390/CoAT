@@ -1,0 +1,20 @@
+{
+    "screen_desc": "The screenshot shows the home screen of a smartphone with a pink gradient background. It displays the date \"Tuesday, Jun 7\" along with a weather icon and temperature of 15\u00b0C. There are three app icons at the bottom: Google Maps, a messaging app, and Google Chrome. The bottom of the screen also has a Google search bar with a voice assistant icon. The network status shows LTE connectivity.",
+    "action_think": "The user has requested to search for seafood restaurants on Google Maps. The Maps app is visible on the home screen. Since the home button was pressed previously, the next step is to open Google Maps to initiate the search.",
+    "action_plan": [
+        "Open Google Maps app",
+        "Search for 'seafood restaurants' in the search bar of Google Maps"
+    ],
+    "action_desc": "Tap on the Google Maps app icon",
+    "action_result": "By scrolling up, the map interface in the Google Maps app has been revealed, potentially showing more options for zooming in or out, or uncovering additional information such as search results or menu options.\n\nThis action helps in progressing toward the user's request of finding seafood restaurants on Google Maps. Since the map view is now more accessible, it is likely that the user can search directly for seafood restaurants by typing a query or using voice search, further advancing towards the goal. However, additional steps like tapping the search bar or entering the specific query are still necessary to complete the task.",
+    "action_predict": {
+        "COAT": {
+            "tag": {
+                "ACTION": "click_element",
+                "ARGS": {
+                    "idx": 3
+                }
+            }
+        }
+    }
+}

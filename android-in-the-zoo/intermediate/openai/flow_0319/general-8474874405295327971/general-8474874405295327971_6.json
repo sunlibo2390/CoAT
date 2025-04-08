@@ -1,0 +1,23 @@
+{
+    "screen_desc": "The screenshot displays the YouTube app on a mobile device. The top section shows a search bar labeled \"Search YouTube,\" with an icon for voice search on the right. The lower part features a currently playing video titled \"Taylor Swift - All Too Well: The S...,\" from the TaylorSwiftVEVO channel. The video controls, including play/pause and a close button, are visible at the bottom.",
+    "action_think": "The user has requested to play the new Justin Bieber video on YouTube. Currently, the search bar is active, which suggests that the user is preparing to search for a video. The next logical step is to search for the 'new Justin Bieber video' in the search bar, which will bring up relevant results for the user to select from.",
+    "action_plan": [
+        "Enter the search query for the 'new Justin Bieber video' in the search bar.",
+        "Review the search results for the relevant video.",
+        "Select the new Justin Bieber video from the results.",
+        "Play the selected video."
+    ],
+    "action_desc": "Enter 'new Justin Bieber video' in the search bar.",
+    "action_result": "By typing \"new Justin Bieber video\" into the search bar, I have successfully initiated a search for new Justin Bieber videos on YouTube. This action is a crucial step in fulfilling the user request, as it will provide relevant video results related to the new Justin Bieber video. The next step would be to select a video from the search results and play it. Therefore, this action makes significant progress toward completing the user request of playing the new Justin Bieber video.",
+    "prev_action_result": "By clicking on the search bar, the interface is now ready for you to enter a query. The search bar is visible at the top of the screen, and it allows you to type in the title of the video you're looking for. This is a necessary step because you need to search for the specific Justin Bieber video on YouTube to play it.\n\nThis action is a direct progress toward your request, as you can now type in \"Justin Bieber\" and find his latest video on YouTube. Once you search, you'll be able to select and play the video.",
+    "action_predict": {
+        "COAT": {
+            "tag": {
+                "ACTION": "input",
+                "ARGS": {
+                    "text": "new Justin Bieber video"
+                }
+            }
+        }
+    }
+}
